@@ -1,0 +1,13 @@
+{
+  "name"          : "stackedit-tumblr-proxy",
+  "description"   : "Tumblr API proxy for StackEdit.",
+  "url"           : "http://benweet.github.io/stackedit/",
+  "keywords"      : ["stackedit", "oauth"],
+  "author"        : "Benoit Schweblin",
+  "contributors"  : [],
+  "dependencies"  : ["express", "oauth", "tumblr.js"],
+  "engines"       : { "node": "0.10.x" },
+  "lib"           : ".",
+  "main"          : "index",
+  "version"       : "0.1.0"
+}
