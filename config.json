@@ -1,10 +1,6 @@
 {
-  "oauth_client_id": "GITHUB_APPLICATION_CLIENT_ID",
-  "oauth_client_secret": "GITHUB_APPLICATION_CLIENT_SECRET",
-  "oauth_host": "github.com",
-  "oauth_port": 443,
-  "oauth_path": "/login/oauth/access_token",
-  "oauth_method": "POST",
+  "oauth_consumer_key": "TUMBLR_CONSUMER_KEY",
+  "oauth_consumer_secret": "TUMBLR_SECRET_KEY",
   "oauth_request_token_url": "http://www.tumblr.com/oauth/request_token",
   "oauth_access_token_url": "http://www.tumblr.com/oauth/access_token"
 }

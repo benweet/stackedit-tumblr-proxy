@@ -35,8 +35,8 @@ function createOauthObject() {
 	return new oauth(
 		config.oauth_request_token_url,
 		config.oauth_access_token_url,
-		"FnkMtsfiHrW3QwBvLNEA4rYqQRqGitzEjt1RoCMn6KCAs98Drj",
-		"GlSAlV4z2g7VrffqYpmEMxenUsbw71OeQPwxaTKiYeLgG09N8g",
+		config.oauth_consumer_key,
+		config.oauth_consumer_secret,
 		"1.0",
 		"http://localhost/cb",
 		"HMAC-SHA1");
@@ -82,8 +82,8 @@ app.get('/access_token', function(req, res) {
 app.post('/post', function(req, res) {
 	console.log("/post");
 	var client = tumblr.createClient({
-		  consumer_key: "FnkMtsfiHrW3QwBvLNEA4rYqQRqGitzEjt1RoCMn6KCAs98Drj",
-		  consumer_secret: "GlSAlV4z2g7VrffqYpmEMxenUsbw71OeQPwxaTKiYeLgG09N8g",
+		  consumer_key: config.oauth_consumer_key,
+		  consumer_secret: config.oauth_consumer_secret,
 		  token: req.body.access_token,
 		  token_secret: req.body.access_token_secret
 	});
