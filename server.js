@@ -117,7 +117,7 @@ app.post('/post', function(req, res) {
 			} 
 		}
 		if(authorized === false) {
-			res.send("Blog hostname is not allowed", 500);
+			res.send("Blog hostname not associated to user", 500);
 			return;
 		}
 		var options = {};
@@ -127,7 +127,7 @@ app.post('/post', function(req, res) {
 			options.format = req.body.format;
 		}
 		if(req.body.tags) {
-			options.tag = req.body.tags;
+			options.tags = req.body.tags;
 		}
 		function callback(err, data) {
 			if(err) {
@@ -138,8 +138,14 @@ app.post('/post', function(req, res) {
 			res.json(data);
 		}
 		if(req.body.post_id) {
-			options.id = req.body.post_id;
-			client.edit(req.body.blog_hostname, options, callback);
+			client.posts(req.body.blog_hostname, {id: req.body.post_id}, function(err, data) {
+				if(err) {
+					handleError(err);
+					return;
+				}
+				options.id = req.body.post_id;
+				client.edit(req.body.blog_hostname, options, callback);
+			});
 		}
 		else {
 			client.text(req.body.blog_hostname, options, callback);
