@@ -3,6 +3,12 @@ StackEdit Tumblr proxy
 
 Tumblr proxy for StackEdit. Supports Tumblr API v2.
 
+**Usage:**
+
+	npm install
+	node server.js
+
+
 Deploy on Heroku
 ----------------
 
