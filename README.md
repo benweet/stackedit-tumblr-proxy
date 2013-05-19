@@ -1,4 +1,4 @@
-StackEdit Tumblr proxy
+StackEdit Tumblr Proxy
 ======================
 
 Tumblr proxy for StackEdit. Supports Tumblr API v2.
