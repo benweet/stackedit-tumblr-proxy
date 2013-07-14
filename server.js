@@ -38,7 +38,7 @@ function createOauthObject() {
 		config.oauth_consumer_key,
 		config.oauth_consumer_secret,
 		"1.0",
-		"http://localhost/cb",
+		config.oauth_redirect_url,
 		"HMAC-SHA1");
 }
 

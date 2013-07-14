@@ -2,5 +2,6 @@
   "oauth_consumer_key": "TUMBLR_CONSUMER_KEY",
   "oauth_consumer_secret": "TUMBLR_SECRET_KEY",
   "oauth_request_token_url": "http://www.tumblr.com/oauth/request_token",
-  "oauth_access_token_url": "http://www.tumblr.com/oauth/access_token"
+  "oauth_access_token_url": "http://www.tumblr.com/oauth/access_token",
+  "oauth_redirect_url": "http://benweet.github.io/stackedit/tumblr-oauth-client.html"
 }
