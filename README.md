@@ -22,7 +22,7 @@ Deploy on Heroku
 
  - Specify application's consumer key / secret key:
 
-		heroku config:add OAUTH_CONSUMER_KEY=abc OAUTH_CONSUMER_SECRET=xyz
+		heroku config:add OAUTH_CONSUMER_KEY=abc OAUTH_CONSUMER_SECRET=xyz OAUTH_REDIRECT_URL=http://localhost/html/tumblr-oauth-client.html
 
  - Push changes to Heroku:
 
