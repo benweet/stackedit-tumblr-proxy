@@ -51,8 +51,8 @@ app.get('/request_token', function(req, res) {
 			res.json({error: error});
 			return;
 		}
-		console.log("OAuth token: " + oauth_token);
-		console.log("OAuth token secret: " + oauth_token_secret);
+		//console.log("OAuth token: " + oauth_token);
+		//console.log("OAuth token secret: " + oauth_token_secret);
 		// Send OAuth token back to the client
 		res.json({oauth_token: oauth_token, oauth_token_secret: oauth_token_secret});
 	});
@@ -71,8 +71,8 @@ app.get('/access_token', function(req, res) {
 				res.json({error: error});
 				return;
 			}
-			console.log("Access token: " + oauth_access_token);
-			console.log("Access token secret: " + oauth_access_token_secret);
+			//console.log("Access token: " + oauth_access_token);
+			//console.log("Access token secret: " + oauth_access_token_secret);
 			// Send access token back to the client
 			res.json({access_token: oauth_access_token, access_token_secret: oauth_access_token_secret});
 		}
@@ -129,6 +129,13 @@ app.post('/post', function(req, res) {
 		if(req.body.tags) {
 			options.tags = req.body.tags;
 		}
+                if(req.body.state) {
+                        options.state = req.body.state;
+                }
+                if(req.body.date) {
+                        options.date = req.body.date;
+                }
+
 		function callback(err, data) {
 			if(err) {
 				handleError(err);
